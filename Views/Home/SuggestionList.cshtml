@@ -1,0 +1,23 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Suggestion List";
+}
+@model IEnumerable<Assignment4.Models.RestaurantSuggestions>
+<div class="w-50 mx-auto">
+    <h2 class="h-25">Suggestion List</h2>
+    <div class="w-50 mx-auto">
+        @foreach (Assignment4.Models.RestaurantSuggestions x in Model)
+        {
+            <ul>
+                <li>@x.Name</li>
+                <ul>
+                    <li>@x.RestaurantName</li>
+                    <li>@x.FavoriteDish</li>
+                    <li>@x.Phone</li>
+                </ul>
+            </ul>
+        }
+    </div>
+</div>

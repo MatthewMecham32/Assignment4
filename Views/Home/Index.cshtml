@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IEnumerable<string>
+
+<!Doctype html>
+<html>
+
+<body>
+    <header>
+        <h1 class="text-center text-dark">Top 5 Restaurants </h1>
+    </header>
+
+    <br />
+    <br />
+    <div class="text-body justify-content-md-center">
+        <ul class="col-md-8 mx-auto">
+            <!--Use razr to output the list of top 5 restaurants-->
+            @foreach (string r in Model)
+            {
+                <li>@Html.Raw(r) </li>
+            }
+        </ul>
+    </div>
+
+    
+</body>
+
+</html>
